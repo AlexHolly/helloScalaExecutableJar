@@ -62,13 +62,13 @@ sbt assembly
 
 projectfolder\target\scala-2.11\nameOfOutput.jar.
 
-**Problems?**
+# **Problems?**
 
 There is only one main **“def main(args: Array[String])”** in your project allowed. 
 
 Otherwise you get an error **“no mainmanifestattribut, in nameOfOutput.jar”**
 
-Jar won't start? Try 
+**Jar won't start? Try**
 ```
 java -jar nameOfOutput.jar
 ```
