@@ -1,4 +1,4 @@
-package helloScalaExecutableJar
+package helloscalaexecutablejar
 
 import javax.swing.JFrame
 

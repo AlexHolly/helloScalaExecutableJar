@@ -16,7 +16,7 @@ mergeStrategy in assembly := {
 
 name := "helloScalaExecutableJar"
 
-organization := "de.alexander.holland.helloscalaexecutablejar"
+organization := "helloscalaexecutablejar"
 
 version := "0.0.1-SNAPSHOT"
 
