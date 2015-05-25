@@ -53,10 +53,6 @@ projectfolder\build.sbt
 
 # **Create Scala executable-Jar**
 
-There is only one main **“def main(args: Array[String])”** in your project allowed. 
-
-Otherwise you get an error **“no mainmanifestattribut, in nameOfOutput.jar”**
-
 ```
 cd ..\projectfolder\
 
@@ -65,6 +61,12 @@ sbt assembly
 **Output**
 
 projectfolder\target\scala-2.11\nameOfOutput.jar.
+
+**Problems?**
+
+There is only one main **“def main(args: Array[String])”** in your project allowed. 
+
+Otherwise you get an error **“no mainmanifestattribut, in nameOfOutput.jar”**
 
 Jar won't start? Try 
 ```
