@@ -1,9 +1,7 @@
-import AssemblyKeys._
-
-assemblySettings
- 
 jarName in assembly := "helloScalaExecutableJar.jar"
- 
+
+assemblyOption in assembly := (assemblyOption in assembly).value.copy(cacheUnzip = false)
+
 mergeStrategy in assembly := {
     case PathList("META-INF", xs @ _*) =>
      (xs map {_.toLowerCase}) match {
