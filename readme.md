@@ -1,4 +1,4 @@
-Tested(25.05.2015) on Windows, sbt 0.13.6, scala 2.11.6, java se 1.8.0_45
+Tested(06.11.2015) on Ubuntu, sbt 0.13.9, scala 2.11.7, java se 1.8.0_60
 
 # **Build a Scala executable-Jar in three simple steps**
 
@@ -23,32 +23,11 @@ There are two ways to add a Plugin.
 Don't forget one empty line to seperate plugins
 
 ```
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.11.2")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.0")
 ```
 
 Source: https://github.com/sbt/sbt-assembly :  http://www.scala-sbt.org/
 
-# **Add some stuff to build.sbt**
-
-projectfolder\build.sbt
-
-```
-  import AssemblyKeys._
- 
-  assemblySettings
- 
-  jarName in assembly := "nameOfOutput.jar"
- 
-  mergeStrategy in assembly := {
-    case PathList("META-INF", xs @ _*) =>
-     (xs map {_.toLowerCase}) match {
-       case ("manifest.mf" :: Nil) | ("index.list" :: Nil) |
-            ("dependencies" :: Nil) => MergeStrategy.discard
-       case _ => MergeStrategy.discard
-     }
-    case _ => MergeStrategy.first
-  }
-...
 ```
 
 # **Create Scala executable-Jar**
@@ -85,7 +64,7 @@ Source: http://raintomorrow.cc/post/50811498259/how-to-package-a-scala-project-i
 
 ---
 
-# **Merge duplicate files**
+# **Merge duplicate files deprecated?**
 ```
 mergeStrategy in assembly := {
     case PathList("META-INF", xs @ _*) =>
